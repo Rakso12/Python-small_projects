@@ -18,8 +18,9 @@ podejscia = int(1)
 while(podana_liczba != losowana_liczba):
     if(podana_liczba < losowana_liczba):
         print("Zbyt małą! Próbuj dalej")
-    if(podana_liczba > losowana_liczba):
+    else:
         print("Zbyt duża! Próbuj dalej!")
+
     podana_liczba = int(input())
     podejscia += 1
 
