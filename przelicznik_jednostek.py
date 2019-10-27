@@ -21,7 +21,7 @@ if wybor_wielkosci==1:
     if(przelicznik == 1):
         wynik = wartosc + 273.15
         print(wynik)
-    if(przelicznik == 2):
+    elif(przelicznik == 2):
         wynik = wartosc - 273.15
         print(wynik)
     else:
@@ -36,10 +36,43 @@ if wybor_wielkosci == 2:
     print("Podaj wartość jaką chcesz zamienić")
     wartosc = float(input())
     if(przelicznik == 1):
+        wynik = wartosc / 3.6
+        print(wynik)
+    elif(przelicznik == 2):
         wynik = wartosc * 3.6
         print(wynik)
-    if(przelicznik == 2):
-        wynik = wartosc / 3.6
+    else:
+        print("Podałeś złe kryterium")
+if wybor_wielkosci ==3:
+    print("Przelicznik walut")
+    print('''Wybierz przelicznik
+    [1] - PLN -> EUR
+    [2] - EUR -> PLN
+    [3] - PLN ->  CHF
+    [4] - CHF -> PLN
+    [5] - PLN -> GBP
+    [6] - GBP -> PLN
+    ''')
+    przelicznik = int(input())
+    print("Podaj wartość jaką chcesz zamienić")
+    wartosc = float(input())
+    if(przelicznik == 1):
+        wynik = wartosc / 4.28
+        print(wynik)
+    elif(przelicznik == 2):
+        wynik = wartosc * 4.26
+        print(wynik)
+    elif(przelicznik == 3):
+        wynik = wartosc / 3.89
+        print(wynik)
+    elif(przelicznik == 4):
+        wynik = wartosc * 3.87
+        print(wynik)
+    elif(przelicznik == 5):
+        wynik = wartosc / 4.96
+        print(wynik)
+    elif(przelicznik == 6):
+        wynik = wartosc * 4.94
         print(wynik)
     else:
         print("Podałeś złe kryterium")
