@@ -1,5 +1,5 @@
 from datetime import datetime
-import time
+from time import sleep
 import os
 import sys
 
@@ -10,9 +10,8 @@ if(sys.platform.startswith('win32')):
 else:
     print("coś nie tak")
 
-
 while True:
     czas = datetime.now()
     print(czas.strftime("%X"))
-    time.sleep(1)
+    sleep(1)
     clear()
