@@ -45,7 +45,7 @@ pobranie = input()
 
 x = re.search('^(\d+(?:(?:\.|\,)\d{0,2})?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
 while(x == None):
-    print("Prosze podaj kwotę wraz z walutą [pamiętaj o kropce zamiast przecinka oraz walucie i kwocie]")
+    print("Prosze podaj kwotę wraz z walutą [pamiętaj o kropce zamiast przecinka oraz walucie]")
     pobranie = input()
     x = re.search('^(\d+(?:(?:\.|\,)\d{0,2})?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
 
