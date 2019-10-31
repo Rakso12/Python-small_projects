@@ -42,12 +42,12 @@ for currency in r:
 
 print("Podaj kwotę do wymiany wraz z walutą:")
 pobranie = input()
+x = re.search('^(\d+?\.?\d{0,2}?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
 
-x = re.search('^(\d+(?:(?:\.|\,)\d{0,2})?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
 while(x == None):
     print("Prosze podaj kwotę wraz z walutą [pamiętaj o kropce zamiast przecinka oraz walucie]")
     pobranie = input()
-    x = re.search('^(\d+(?:(?:\.|\,)\d{0,2})?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
+    x = re.search('^(\d+?\.?\d{0,2}?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
 
 kwota = float(x.group(1))
 if x.group(2) == 'eur' or x.group(2) == 'EUR':
