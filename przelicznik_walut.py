@@ -42,12 +42,12 @@ for currency in r:
 
 print("Podaj kwotę do wymiany wraz z walutą:")
 pobranie = input()
-x = re.search('^(\d+?\.?\d{0,2}?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
+x = re.search('^(\d+?\.?\d{0,2}?){1}\s*([EUR|eur|PLN|pln|CAD|cad|USD|usd|CHF|chf|CZK|czk|JPY|jpy]{3}){1}$', pobranie)
 
 while(x == None):
     print("Prosze podaj kwotę wraz z walutą [pamiętaj o kropce zamiast przecinka oraz walucie]")
     pobranie = input()
-    x = re.search('^(\d+?\.?\d{0,2}?){1}\s*([a-zA-Z]{3}){1}$', pobranie)
+    x = re.search('^(\d+?\.?\d{0,2}?){1}\s*([EUR|eur|PLN|pln|CAD|cad|USD|usd|CHF|chf|CZK|czk|JPY|jpy]{3}){1}$', pobranie)
 
 kwota = float(x.group(1))
 if x.group(2) == 'eur' or x.group(2) == 'EUR':
@@ -62,3 +62,7 @@ elif x.group(2) == 'jpy' or x.group(2) == 'JPY':
     print("Kwota w Jenach =",jpy_ask * kwota)
 elif x.group(2) == 'czk' or  x.group(2) == 'CZK':
     print("Kwota w Koronach czeskich =",czk_ask * kwota)
+
+#TODO dodać wybór kupno / sprzedaż
+#TODO dodać więcej walut (inne niż pln) do wymiany
+#TODO dodać kontrole wprowadzanej waluty (czy jest taka w bazie)
